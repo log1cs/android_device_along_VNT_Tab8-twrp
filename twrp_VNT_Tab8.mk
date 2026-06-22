@@ -10,13 +10,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit from VNT_Tab8 device
 $(call inherit-product, device/along/VNT_Tab8/device.mk)
 
 PRODUCT_DEVICE := VNT_Tab8
-PRODUCT_NAME := omni_VNT_Tab8
+PRODUCT_NAME := twrp_VNT_Tab8
 PRODUCT_BRAND := VNPTTechnology
 PRODUCT_MODEL := VNT_Tab8
 PRODUCT_MANUFACTURER := along

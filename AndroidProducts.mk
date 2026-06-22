@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_VNT_Tab8.mk
+    $(LOCAL_DIR)/twrp_VNT_Tab8.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_VNT_Tab8-user \
-    omni_VNT_Tab8-userdebug \
-    omni_VNT_Tab8-eng
+    twrp_VNT_Tab8-user \
+    twrp_VNT_Tab8-userdebug \
+    twrp_VNT_Tab8-eng
