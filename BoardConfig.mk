@@ -107,3 +107,5 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_INCLUDE_FASTBOOTD := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_MAX_BRIGHTNESS := 255
