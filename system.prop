@@ -1,6 +1,21 @@
+# Crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.dm_default_key.options_format.version=2
+
+# Gatekeeper
+ro.hardware.gatekeeper=trustkernel
+
+# Keymaster
+keymaster_ver=4.0
+ro.hardware.kmsetkey=trustkernel
+
 # Platform
 ro.hardware=mt8765
 ro.mediatek.platform=MT8765
+ro.vendor.mediatek.platform=MT8765
+
+# TEE
+ro.vendor.mtk_trustkernel_tee_support=1
 
 # USB
 persist.sys.isUsbOtgEnabled=true
