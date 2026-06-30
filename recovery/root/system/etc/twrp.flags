@@ -1,0 +1,35 @@
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+# mount point		fs		device						device2			 device3			flags
+/boot			emmc		/dev/block/by-name/boot											flags=display=Boot;backup;flashimg
+/recovery               emmc            /dev/block/by-name/recovery                                                                             flags=display=Recovery;backup;flashimg
+/vendor_boot		emmc		/dev/block/by-name/vendor_boot										flags=display=vendor_boot;backup;flashimg
+/vbmeta			emmc		/dev/block/by-name/vbmeta										flags=display=vbmeta;backup;flashimg
+/vbmeta_system		emmc		/dev/block/by-name/vbmeta_system									flags=display=vbmeta_system;backup;flashimg
+/vbmeta_vendor		emmc		/dev/block/by-name/vbmeta_vendor									flags=display=vbmeta_vendor;backup;flashimg
+
+# Firmware
+/dtbo			emmc		/dev/block/by-name/dtbo											flags=display=DTBO;backup
+/metadata		ext4		/dev/block/by-name/md_udc										flags=display=metadata;backup;flashimg
+/misc			emmc		/dev/block/by-name/para											flags=display=Misc;backup
+
+# Misc
+/mnt/vendor/nvcfg	ext4		/dev/block/by-name/nvcfg										flags=display=NVCFG;backup
+/persist		emmc		/dev/block/by-name/persist										flags=display=Persist;backup;flashimg
+/persistent		emmc		/dev/block/by-name/frp											flags=display=FRP;backup
+/mnt/vendor/nvdata	ext4		/dev/block/by-name/nvdata										flags=display=NVDATA;backup
+/mnt/vendor/protect_f	ext4		/dev/block/by-name/protect1										flags=display=protect_f;backup
+/mnt/vendor/protect_s	ext4		/dev/block/by-name/protect2										flags=display=protect_s;backup
+/nvram			emmc		/dev/block/by-name/nvram										flags=display=NVRAM;backup
+
+# Standard MediaTeks's partitions
+/flashinfo		emmc		/dev/block/by-name/flashinfo									        flags=display="SPFT log";backup;flashimg
+/expdb			emmc		/dev/block/by-name/expdb										flags=display=CrashLog;backup;flashimg
+/logo			emmc		/dev/block/by-name/logo											flags=display=Logo;backup;flashimg
+/seccfg			emmc		/dev/block/by-name/seccfg										flags=display="Security Config"
+
+# Removable Storage
+/external_sd		auto		/dev/block/mmcblk1p1				/dev/block/mmcblk0p1					flags=display="Micro SD Card";storage;wipeingui;removable;backup=0
+/usb_otg		auto		/dev/block/sda1					/dev/block/sda		/dev/block/sdd1			flags=display="USB-OTG";storage;wipeingui;removable;backup=0
