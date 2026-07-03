@@ -14,6 +14,7 @@ on fs
     mount_all /first_stage_ramdisk/fstab.mt8765 --late
     wait /dev/block/platform/soc/11230000.mmc
     symlink /dev/block/platform/soc/11230000.mmc /dev/block/bootdevice
+    symlink /dev/block/by-name/para /dev/block/by-name/misc
     mkdir /mnt/vendor 0755 system system
     mkdir /mnt/vendor/protect_f 0770 system system
     mkdir /mnt/vendor/protect_s 0770 system system
