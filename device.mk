@@ -32,3 +32,10 @@ PRODUCT_PACKAGES += \
 # Task profiles
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/task_profiles.json
+
+# Additional configs
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.keymaster@4.0
+
+TARGET_RECOVERY_DEVICE_MODULES += \
+    android.hardware.keymaster@4.0
