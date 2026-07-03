@@ -25,6 +25,10 @@ PRODUCT_PACKAGES += \
     libkeymaster_messages \
     libsoft_attestation_cert
 
+# Keystore
+PRODUCT_PACKAGES += \
+    android.system.keystore2
+
 # Task profiles
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_RECOVERY)/root/system/etc/task_profiles.json
