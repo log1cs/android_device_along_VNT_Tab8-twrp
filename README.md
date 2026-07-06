@@ -8,3 +8,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 ```
+
+### What works
+- Touch
+- Sleep
+- Userdata decryption
+- USB
+- BCB
